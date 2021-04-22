@@ -1,0 +1,12 @@
+Selection Algorithm: <cifo.algorithm.ga_operators.TournamentSelection object at 0x7f9986325850>
+cross20_mut80_singlepoint_crossover_sharpe2_
+Population-Size40
+Number-of-Generations400
+Crossover-Probability0.2
+Mutation-Probability0.8
+Initialization-Approach<function initialize_randomly at 0x7f99968a54d0>
+Selection-Approach<bound method TournamentSelection.select of <cifo.algorithm.ga_operators.TournamentSelection object at 0x7f9986325850>>
+Tournament-Size5
+Crossover-Approach<function singlepoint_crossover at 0x7f99947fb950>
+Mutation-Aproach<function swap_mutation_pip at 0x7f99947feb90>
+Replacement-Approach<function elitism_replacement at 0x7f99947fedd0>

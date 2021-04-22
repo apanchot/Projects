@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CIFO</title>
+  
+  <link rel='stylesheet' href='../static/bootstrap-3.3.7/dist/css/bootstrap.min.css' >
+  <link rel='stylesheet' href='../static/fontawesome4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="mnb navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="ic fa fa-bars"></i>
+      </button>
+      <div style="padding: 15px 0;">
+         <a href="#" id="msbo"><i class="ic fa fa-bars"></i></a>
+      </div>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+    </div>
+  </div>
+</nav>
+<!--msb: main sidebar-->
+<div class="msb bg-color-info" id="msb">
+		<nav class="navbar navbar-default" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<div class="brand-wrapper">
+					<!-- Brand -->
+					<div class="brand-name-wrapper">
+						<a class="navbar-brand" href="#">
+							CIFO Project
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Main Menu -->
+			<div class="side-menu-container">
+				<ul class="nav navbar-nav">
+
+          <!-- Dropdown GA
+          ---------------------------------------------------------------------------------- -->
+          <li class="panel panel-default">
+            <a href="#GA_submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fa fa-flask"></i>Genetic Algorithm
+                <span class="caret"></span>
+            </a>
+            <ul class="panel-body nav navbar-nav collapse list-unstyled" id="GA_submenu">
+                <li><a href="#"><i class="fa fa-play-circle"></i>Search</a></li>
+                <li><a href="#"><i class="fa fa-play-circle"></i>Report</a></li>
+            </ul>
+          </li>
+
+          <!-- Dropdown SA
+          ---------------------------------------------------------------------------------- -->
+          <li class="panel panel-default">
+              <a href="#SA_submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                  <i class="fa fa-flask"></i>Simulated Annealing
+                  <span class="caret"></span>
+              </a>
+              <ul class="panel-body nav navbar-nav collapse list-unstyled" id="SA_submenu">
+                  <li><a href="#"><i class="fa fa-play-circle"></i>Search</a></li>
+                  <li><a href="#"><i class="fa fa-play-circle"></i>Report</a></li>
+              </ul>
+            </li>
+
+
+          <!-- Dropdown HC
+          ---------------------------------------------------------------------------------- -->
+          <li class="panel panel-default">
+              <a href="#HC_submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                  <i class="fa fa-flask"></i>Hill Climbing
+                  <span class="caret"></span>
+              </a>
+              <ul class="panel-body nav navbar-nav collapse list-unstyled" id="HC_submenu">
+                  <li><a href="#"><i class="fa fa-play-circle"></i>Search</a></li>
+                  <li><a href="#"><i class="fa fa-play-circle"></i>Report</a></li>
+              </ul>
+            </li>  
+        </ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>  
+</div>
+
+
+<!--main content wrapper-->
+<div class="mcw">
+  <div class="container-fluid">
+    <h2 clss="bd-title">Configure the Genetic Algorthm Search</h2>
+    
+    <div class="row">
+      <div class="col-md-12">
+       <p>Here you can cponfigure the search using the genetic algorithm</p>
+      </div>
+    </div>
+
+    <h4 clss="bd-title">1. Problem</h4>
+    <p>Please, select the problem</p>
+
+    <div class="row">
+        <div class="col-md-6">
+           <br>
+            <!-- Problem 
+            ------------------------------------------------------------------------------------------------------------------------------ -->
+            <form class="form-horizontal">
+
+              <!-- Problem
+              ------------------------------------------------------------------------------------------------------------------------------ -->
+              <div class="form-group">
+                  <label class="control-label col-sm-4" for="problem_name">Problem Name:</label>
+                  <div class="col-sm-8">
+                        <select class="form-control">
+                            <option value="volvo">KP - Knapsack Problem</option>
+                            <option value="saab">TSP Travel Salesman Problem</option>
+                            <option value="mercedes">PIP - Portfolio Investment Problem</option>
+                            <option value="audi">...</option>
+                        </select>   
+                  </div>
+              </div>
+              
+              <br>
+              <h4 clss="bd-title">2. Genetic Algorithm Parameters</h4>
+              <p>Please, define the parameters for GA</p>
+              <!-- Population Size 
+              ------------------------------------------------------------------------------------------------------------------------------ -->
+              <div class="form-group">
+                  <label class="control-label col-sm-4" for="population_size">Population Size:</label>
+                  <div class="col-sm-8">
+                    <input type="number" class="form-control" id="population_size" placeholder="20" name="population_size">
+                  </div>
+              </div>
+              <!-- Number of generatioons
+              ------------------------------------------------------------------------------------------------------------------------------ -->
+              <div class="form-group">
+                  <label class="control-label col-sm-4" for="number_of_generations">Number of Generations:</label>
+                  <div class="col-sm-8">
+                    <input type="number" class="form-control" id="number_of_generations" placeholder="1000" name="number_of_generations">
+                  </div>
+              </div>
+              <!-- Cross
+              ------------------------------------------------------------------------------------------------------------------------------ -->
+              <div class="form-group">
+                  <label class="control-label col-sm-4" for="crossover_probability">Crossover Probability:</label>
+                  <div class="col-sm-8">
+                    <input type="number" class="form-control" id="crossover_probability" placeholder="0.90" name="crossover_probability">
+                  </div>
+              </div>
+              <!-- Population Size 
+              ------------------------------------------------------------------------------------------------------------------------------ -->
+              <div class="form-group">
+                  <label class="control-label col-sm-4" for="mutation_probability">Mutation Probability:</label>
+                  <div class="col-sm-8">
+                    <input type="number" class="form-control" id="mutation_probability" placeholder="0.90" name="mutation_probability">
+                  </div>
+              </div>
+              
+              <br>
+              <h4 clss="bd-title">3. Genetic Operators and Approaches</h4>
+              <p>Please, define the genetic operators and approaches for your search</p>
+
+              <!-- Initialization
+              ------------------------------------------------------------------------------------------------------------------------------ -->
+              <div class="form-group">
+                  <label class="control-label col-sm-4" for="problem_name">Initialization:</label>
+                  <div class="col-sm-8">
+                        <select class="form-control">
+                            <option value="volvo">Random Initialization</option>
+                            <option value="saab">...</option>
+                            <option value="mercedes">...</option>
+                            <option value="audi">...</option>
+                        </select>   
+                  </div>
+              </div>
+              <!-- Selection
+              ------------------------------------------------------------------------------------------------------------------------------ -->
+              <div class="form-group">
+                  <label class="control-label col-sm-4" for="problem_name">Selection (Parent Selection):</label>
+                  <div class="col-sm-8">
+                        <select class="form-control">
+                            <option value="volvo">Roulette Wheel Selection</option>
+                            <option value="saab">Rank Selection</option>
+                            <option value="mercedes">Tournament Selection</option>
+                            <option value="audi">...</option>
+                        </select>   
+                  </div>
+              </div>
+              <p>If you selected Selection Approach is "Tournament Selection, please define the tournament size"</p>
+              <!-- Tournament Size
+              ------------------------------------------------------------------------------------------------------------------------------ -->
+              <div class="form-group">
+                  <label class="control-label col-sm-4" for="tournament_size">Tournament Size:</label>
+                  <div class="col-sm-8">
+                    <input type="number" class="form-control" id="number_of_generations" placeholder="1000" name="number_of_generations">
+                  </div>
+              </div>
+              <!-- Crossover
+              ------------------------------------------------------------------------------------------------------------------------------ -->
+              <div class="form-group">
+                  <label class="control-label col-sm-4" for="crossover_approach">Crossover:</label>
+                  <div class="col-sm-8">
+                        <select class="form-control">
+                            <option value="volvo">SinglePoint  Crossover</option>
+                            <option value="saab">...</option>
+                            <option value="mercedes">...</option>
+                            <option value="audi">...</option>
+                        </select>   
+                  </div>
+              </div>
+               <!-- Mutation
+              ------------------------------------------------------------------------------------------------------------------------------ -->
+              <div class="form-group">
+                  <label class="control-label col-sm-4" for="mutation_aproach">Mutation:</label>
+                  <div class="col-sm-8">
+                        <select class="form-control">
+                            <option value="volvo">SinglePoint Mutation</option>
+                            <option value="saab">...</option>
+                            <option value="mercedes">...</option>
+                            <option value="audi">...</option>
+                        </select>   
+                  </div>
+              </div>    
+              <!-- Replacement
+              ------------------------------------------------------------------------------------------------------------------------------ -->
+              <div class="form-group">
+                  <label class="control-label col-sm-4" for="replacement_approach">Replacement:</label>
+                  <div class="col-sm-8">
+                        <select class="form-control">
+                            <option value="volvo">Standard Replacement</option>
+                            <option value="saab">Elitism Replacement</option>
+                            <option value="mercedes">...</option>
+                            <option value="audi">...</option>
+                        </select>   
+                  </div>
+              </div> 
+              
+              
+              <br>
+              <h4 clss="bd-title">4. Search</h4>
+              <p>Please, define the genetic operators and approaches for your search</p>
+              <!-- Number of Runs
+              ------------------------------------------------------------------------------------------------------------------------------ -->
+              <div class="form-group">
+                  <label class="control-label col-sm-4" for="tournament_size">Number of Runs:</label>
+                  <div class="col-sm-8">
+                    <input type="number" class="form-control" id="number_of_runs" placeholder="30" name="number_of_runs">
+                  </div>
+              </div>
+
+              <!-- Log File Name
+              ------------------------------------------------------------------------------------------------------------------------------ -->
+              <div class="form-group">
+                  <label class="control-label col-sm-4" for="tournament_size">Log Name:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="log_filename" placeholder="log_name" name="log_filename">
+                  </div>
+              </div>
+
+              <br>
+
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-sm-2"> </div>
+                  <input class="btn btn-primary btn-lg col-sm-8" type="submit" value="Run">
+                  <div class="col-sm-2"> </div>
+                </div>
+              </div>
+          </form>
+        </div>
+    </div>
+    
+
+
+</div>
+
+
+<!-- partial -->
+<script src='../static/js/jquery-3.4.1.js'></script>
+<script src='../static/bootstrap-3.3.7/dist/js/bootstrap.js'></script>
+<script src="../static/js/script.js"></script>
+
+</body>
+</html>
